@@ -17,6 +17,8 @@ class BoraboraSummary extends StatelessWidget {
     return new GestureDetector(
       onTap: horizontal
           ? () => Navigator.of(context).push(
+                // PageRouteBuilder는 animation 객체를 제공해준다. 따라서 페이지
+                // 변경 시, 애니메이션을 사용할 수 있다.
                 new PageRouteBuilder(
                   pageBuilder: (_, __, ___) => new DetailPage(borabora),
                   transitionsBuilder:
